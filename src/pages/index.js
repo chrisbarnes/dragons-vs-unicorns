@@ -31,9 +31,9 @@ const IndexPage = () => (
         `}
         render={data => (
           <>
-            <Img fixed={data.unicornImage.childImageSharp.fixed} />
+            <Img className="dragon" fixed={data.dragonImage.childImageSharp.fixed} />
             <span className="vs">VS</span>
-            <Img fixed={data.dragonImage.childImageSharp.fixed} />
+            <Img className="unicorn" fixed={data.unicornImage.childImageSharp.fixed} />
           </>
         )}
       />

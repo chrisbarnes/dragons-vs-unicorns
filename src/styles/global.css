@@ -5,11 +5,29 @@ html {
 
 .dragon-unicorn-images {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+}
+
+@media (min-width: 640px) {
+    .dragon-unicorn-images {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.dragon-unicorn-images .gatsby-image-wrapper {
+    margin: 0 auto 40px;
 }
 
 .vs {
+    display: block;
+    margin: 20px auto 40px;
     font-size: 2rem;
     font-weight: bold;
+    text-align: center;
+}
+
+.unicorn {
+    transform: rotateY(180deg);
 }
