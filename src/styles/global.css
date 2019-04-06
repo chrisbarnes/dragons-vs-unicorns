@@ -3,3 +3,13 @@ html {
     background-color: #fff;
 }
 
+.dragon-unicorn-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vs {
+    font-size: 2rem;
+    font-weight: bold;
+}

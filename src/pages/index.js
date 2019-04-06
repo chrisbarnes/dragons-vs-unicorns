@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import { StaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
@@ -10,31 +9,32 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <h1>Hey Friends. Welcome to Dragons vs. Unicorns.</h1>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+    <div className="dragon-unicorn-images">
       <StaticQuery
         query={graphql`
           query {
             unicornImage: file(relativePath: { eq: "unicorn.png" }) {
               childImageSharp {
-                fluid(maxWidth: 300) {
-                  ...GatsbyImageSharpFluid
+                fixed(width: 300) {
+                  ...GatsbyImageSharpFixed
                 }
               }
             },
             dragonImage: file(relativePath: { eq: "dragon.png" }) {
               childImageSharp {
-                fluid(maxWidth: 300) {
-                  ...GatsbyImageSharpFluid
+                fixed(width: 300) {
+                  ...GatsbyImageSharpFixed
                 }
               }
             }
           }
         `}
         render={data => (
-          <div>
-            <Img fluid={data.unicornImage.childImageSharp.fluid} />
-            <Img fluid={data.dragonImage.childImageSharp.fluid} />
-          </div>
+          <>
+            <Img fixed={data.unicornImage.childImageSharp.fixed} />
+            <span class="vs">VS</span>
+            <Img fixed={data.dragonImage.childImageSharp.fixed} />
+          </>
         )}
       />
     </div>
