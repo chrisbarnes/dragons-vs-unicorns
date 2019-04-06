@@ -27,6 +27,7 @@ const IndexPage = () => (
     <ul>
         <li>Some unicorns have wings.</li>
         <li>There are lots of unicorns but not dragons.</li>
+        <li>Unicorns have magical horns</li>
     </ul>
     <Link to="/dragons">Go to Dragons</Link>
   </Layout>
