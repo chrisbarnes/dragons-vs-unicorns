@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Home" keywords={[`gatsby`, `application`, `react`, `dragons`, `unicorns`]} />
     <h1>Hey Friends. Welcome to Dragons vs. Unicorns.</h1>
     <div className="dragon-unicorn-images">
       <StaticQuery
