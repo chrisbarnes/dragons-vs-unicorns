@@ -32,7 +32,7 @@ const IndexPage = () => (
         render={data => (
           <>
             <Img fixed={data.unicornImage.childImageSharp.fixed} />
-            <span class="vs">VS</span>
+            <span className="vs">VS</span>
             <Img fixed={data.dragonImage.childImageSharp.fixed} />
           </>
         )}
